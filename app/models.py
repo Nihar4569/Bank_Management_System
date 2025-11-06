@@ -1,15 +1,12 @@
-from flask_sqlalchemy import SQLAlchemy
+from app.db import db
 
-db = SQLAlchemy()
+class Account(db.Model):
+    __tablename__ = 'accounts'   # Table name in DB
 
-class Bank_Account(db.Model):
-    __tablename__ = 'employee'
-    id = db.column(db.Integer, primary_key=True)
-    name = db.column(db.String(100), nullable=False)
-    number = db.column(db.Integer, unique=True, nullable=False)
-    balance = db.column(db.Float, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    number = db.Column(db.String(50), unique=True, nullable=False)
+    balance = db.Column(db.Float, default=0.0)
 
     def __repr__(self):
-        return f'[Bank_Account {self.name} - {self.number} - {self.balance}]'
-    
-    
+        return f"<Account {self.id} - {self.name}>"
