@@ -12,6 +12,7 @@ from app.crud import (
     batch_calc
 )
 from app.batch_calc import calc_total_balance
+from app.scraper import scrape_interest_rates, scrape_bank_names
 
 # Create a Blueprint (like a mini app inside Flask)
 bp = Blueprint('routes', __name__)
@@ -151,3 +152,14 @@ def transfer():
 def calculate_total_balance():
     result = batch_calc()
     return jsonify(result), 200
+
+@bp.route("/scrape/interest-rates", methods=["GET"])
+def get_interest_rates():
+    data = scrape_interest_rates()
+    return jsonify(data), 200
+
+
+@bp.route("/scrape/bank-names", methods=["GET"])
+def get_bank_names():
+    data = scrape_bank_names()
+    return jsonify({"banks": data}), 200
