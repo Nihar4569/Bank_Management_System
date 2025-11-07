@@ -14,18 +14,3 @@
 2025-11-07 11:08:03,875 [INFO]  * Restarting with stat
 2025-11-07 11:08:04,865 [WARNING]  * Debugger is active!
 2025-11-07 11:08:04,868 [INFO]  * Debugger PIN: 126-793-802
-2025-11-07 11:23:57,373 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-11-07 11:23:57,374 [INFO] [33mPress CTRL+C to quit[0m
-2025-11-07 11:23:57,377 [INFO]  * Restarting with stat
-2025-11-07 11:23:58,158 [WARNING]  * Debugger is active!
-2025-11-07 11:23:58,161 [INFO]  * Debugger PIN: 924-682-916
-2025-11-07 11:28:55,502 [INFO] 127.0.0.1 - - [07/Nov/2025 11:28:55] "[31m[1mPOST /accounts HTTP/1.1[0m" 400 -
-2025-11-07 11:29:10,033 [INFO] Account created: 1234567889 | Name: Nihar | Balance: 15000
-2025-11-07 11:29:10,038 [INFO] 127.0.0.1 - - [07/Nov/2025 11:29:10] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
-2025-11-07 15:24:02,738 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on http://127.0.0.1:5000
-2025-11-07 15:24:02,738 [INFO] [33mPress CTRL+C to quit[0m
-2025-11-07 15:24:02,741 [INFO]  * Restarting with stat
-2025-11-07 15:24:03,499 [WARNING]  * Debugger is active!
-2025-11-07 15:24:03,511 [INFO]  * Debugger PIN: 924-682-916

@@ -245,14 +245,6 @@ python client/cli.py total
 
 ---
 
-## 👨‍💻 Author
-
-**Your Name**
-📧 [your.email@example.com](mailto:your.email@example.com)
-🔗 [GitHub](https://github.com/yourusername)
-
----
-
 ## 🪪 License
 
 This project is licensed under the **MIT License** — feel free to modify and distribute it.
