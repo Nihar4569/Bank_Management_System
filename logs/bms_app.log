@@ -68,3 +68,46 @@ Account Number: 1234567890
 Amount Deposited: 500
 New Balance: 5500.0
 2025-11-07 12:34:12,445 [INFO] 127.0.0.1 - - [07/Nov/2025 12:34:12] "POST /accounts/deposit HTTP/1.1" 200 -
+2025-11-07 14:26:36,288 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 14:26:36,289 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 14:26:36,292 [INFO]  * Restarting with stat
+2025-11-07 14:26:37,313 [WARNING]  * Debugger is active!
+2025-11-07 14:26:37,320 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 14:26:56,991 [INFO] Batch calculation completed and summary email sent.
+2025-11-07 14:26:56,992 [INFO] 127.0.0.1 - - [07/Nov/2025 14:26:56] "GET /batch_calc HTTP/1.1" 200 -
+2025-11-07 14:27:01,210 [INFO] \u2705 New Account Created
+-------------------------
+Name: Test User
+Account Number: 5550001111
+Opening Balance: 1000
+2025-11-07 14:27:01,216 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:01] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 14:27:01,230 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:01] "GET /accounts HTTP/1.1" 200 -
+2025-11-07 14:27:05,448 [INFO] \U0001f4b0 Deposit Successful
+-------------------------
+Account Number: 5550001111
+Amount Deposited: 500
+New Balance: 1500.0
+2025-11-07 14:27:05,449 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:05] "POST /accounts/deposit HTTP/1.1" 200 -
+2025-11-07 14:27:10,866 [INFO] \U0001f4b8 Withdrawal Successful
+-------------------------
+Account Number: 5550001111
+Amount Withdrawn: 200
+Remaining Balance: 1300.0
+2025-11-07 14:27:10,866 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:10] "POST /accounts/withdraw HTTP/1.1" 200 -
+2025-11-07 14:27:10,876 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:10] "GET /accounts HTTP/1.1" 200 -
+2025-11-07 14:27:15,655 [INFO] \u270f\ufe0f Account Updated
+-------------------------
+Account ID: 1
+Updated Balance: 5500.0
+2025-11-07 14:27:15,656 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:15] "PUT /accounts/1 HTTP/1.1" 200 -
+2025-11-07 14:27:20,575 [INFO] \u2705 New Account Created
+-------------------------
+Name: Delete User
+Account Number: 8889990001
+Opening Balance: 500
+2025-11-07 14:27:20,578 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:20] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 14:27:24,751 [INFO] \u274c Account Deleted
+-------------------------
+Account Number: 8889990001
+2025-11-07 14:27:24,751 [INFO] 127.0.0.1 - - [07/Nov/2025 14:27:24] "DELETE /accounts/3 HTTP/1.1" 200 -
