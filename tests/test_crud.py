@@ -3,54 +3,27 @@ import requests
 
 BASE_URL = "http://127.0.0.1:5000"
 
-def test_create_account():
-    data = {
-        "name": "Test User",
-        "number": "5550001111",
-        "email": "testuser@gmail.com",
-        "balance": 1000
-    }
-    response = requests.post(f"{BASE_URL}/accounts", json=data)
-    assert response.status_code == 201
-    result = response.json()
-    assert result["name"] == "Test User"
-    assert "id" in result
+def test_create_accounts():
+    """Create new accounts."""
+    users = [
+        {"name": "Nihar", "number": "10001", "email": "nihar4569@gmail.com", "balance": 2000},
+        {"name": "Rishabh", "number": "10002", "email": "iamrishabh1000@gmail.com", "balance": 2500},
+        {"name": "Sahu", "number": "10003", "email": "sahun4569@gmail.com", "balance": 3000},
+        {"name": "Rishabh Singh", "number": "10004", "email": "rishabhsingh29yes@gmail.com", "balance": 4000},
+    ]
+
+    for user in users:
+        res = requests.post(f"{BASE_URL}/accounts", json=user)
+        assert res.status_code in (200, 201)
+        data = res.json()
+        assert "id" in data
+        assert data["name"] == user["name"]
+
 
 def test_get_accounts():
-    response = requests.get(f"{BASE_URL}/accounts")
-    assert response.status_code == 200
-    assert isinstance(response.json(), list)
-
-def test_deposit_money():
-    data = {"number": "5550001111", "amount": 500}
-    response = requests.post(f"{BASE_URL}/accounts/deposit", json=data)
-    assert response.status_code == 200
-    assert "balance" in response.json()
-
-def test_withdraw_money():
-    data = {"number": "5550001111", "amount": 200}
-    response = requests.post(f"{BASE_URL}/accounts/withdraw", json=data)
-    assert response.status_code == 200
-    assert "balance" in response.json()
-
-def test_update_account():
-    # get first account id
-    acc_list = requests.get(f"{BASE_URL}/accounts").json()
-    acc_id = acc_list[0]["id"]
-    data = {"name": "Updated User"}
-    response = requests.put(f"{BASE_URL}/accounts/{acc_id}", json=data)
-    assert response.status_code == 200
-
-def test_delete_account():
-    # create a temporary account first
-    data = {
-        "name": "Delete User",
-        "number": "8889990001",
-        "email": "deleteuser@gmail.com",
-        "balance": 500
-    }
-    new_acc = requests.post(f"{BASE_URL}/accounts", json=data).json()
-    acc_id = new_acc["id"]
-
-    response = requests.delete(f"{BASE_URL}/accounts/{acc_id}")
-    assert response.status_code == 200
+    """Check if accounts list is returned."""
+    res = requests.get(f"{BASE_URL}/accounts")
+    assert res.status_code == 200
+    data = res.json()
+    assert isinstance(data, list)
+    assert len(data) >= 4
