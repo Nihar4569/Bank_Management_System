@@ -1,31 +1,29 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.base import MIMEBase
+from email import encoders
 
-# Gmail credentials (use App Password, not your actual password)
+# ✅ Gmail sender credentials
 from_address = "abhishekojha786786@gmail.com"
-app_password = "ognojytoigydntpk"
+app_password = "ognojytoigydntpk"  # App password, not normal password
 
 
 def send_mail(to_address, subject, body, attachment_path=None):
     """
     Sends an email with optional attachment using Gmail SMTP.
     """
+
     try:
         # Create the email
         msg = MIMEMultipart()
         msg["From"] = from_address
         msg["To"] = to_address
         msg["Subject"] = subject
-
-        # Attach the message body
         msg.attach(MIMEText(body, "plain"))
 
-        # (Optional) Attachment handling
+        # (Optional) Add attachment
         if attachment_path:
-            from email.mime.base import MIMEBase
-            from email import encoders
-
             with open(attachment_path, "rb") as f:
                 part = MIMEBase("application", "octet-stream")
                 part.set_payload(f.read())
@@ -36,16 +34,16 @@ def send_mail(to_address, subject, body, attachment_path=None):
                 )
                 msg.attach(part)
 
-        # Send email using Gmail SMTP
+        # Connect to Gmail SMTP
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login(from_address, app_password)
         server.send_message(msg)
         server.quit()
 
-        print(f"Email sent successfully to {to_address}")
+        print(f"📧 Email sent successfully to {to_address}")
         return True
 
     except Exception as e:
-        print(f"Error sending email: {e}")
+        print(f"❌ Error sending email: {e}")
         return False
