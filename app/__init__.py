@@ -1,5 +1,3 @@
-# app/__init__.py
-
 from flask import Flask, jsonify
 from app.db import init_db, db
 from app.config import Config
@@ -17,7 +15,7 @@ def create_app():
     def home():
         return jsonify({"message": "Welcome to the Banking Management System API!"})
 
-    # ✅ Register the routes (this line connects your blueprint)
+    # Register the routes (this line connects your blueprint)
     app.register_blueprint(routes_bp)
 
     # Create tables if not exist

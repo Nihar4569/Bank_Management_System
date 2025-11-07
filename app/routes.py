@@ -4,8 +4,12 @@ from app.crud import (
     get_all_accounts,
     get_account_by_id,
     update_account,
-    delete_account
+    delete_account,
+    deposit_money,
+    withdraw_money,
+    transfer_money
 )
+from app.batch_calc import calc_total_balance
 
 # Create a Blueprint (like a mini app inside Flask)
 bp = Blueprint('routes', __name__)
@@ -77,3 +81,74 @@ def remove_account(account_id):
     if not success:
         return jsonify({"error": "Account not found"}), 404
     return jsonify({"message": "Account deleted successfully"})
+
+# DEPOSIT - POST /accounts/deposit
+@bp.route('/accounts/deposit', methods=['POST'])
+def deposit():
+    data = request.get_json()
+    acc_number = data.get('number')
+    amount = data.get('amount')
+
+    if not acc_number or amount is None:
+        return jsonify({"error": "Account number and amount required"}), 400
+
+    account, error = deposit_money(acc_number, amount)
+    if error:
+        return jsonify({"error": error}), 400
+
+    return jsonify({
+        "message": f"Deposited {amount} successfully",
+        "balance": account.balance
+    }), 200
+
+
+# WITHDRAW - POST /accounts/withdraw
+@bp.route('/accounts/withdraw', methods=['POST'])
+def withdraw():
+    data = request.get_json()
+    acc_number = data.get('number')
+    amount = data.get('amount')
+
+    if not acc_number or amount is None:
+        return jsonify({"error": "Account number and amount required"}), 400
+
+    account, error = withdraw_money(acc_number, amount)
+    if error:
+        return jsonify({"error": error}), 400
+
+    return jsonify({
+        "message": f"Withdrawn {amount} successfully",
+        "balance": account.balance
+    }), 200
+
+
+# TRANSFER - POST /accounts/transfer
+@bp.route('/accounts/transfer', methods=['POST'])
+def transfer():
+    data = request.get_json()
+    sender = data.get('sender')
+    receiver = data.get('receiver')
+    amount = data.get('amount')
+
+    if not all([sender, receiver, amount is not None]):
+        return jsonify({"error": "Sender, receiver, and amount required"}), 400
+
+    result, error = transfer_money(sender, receiver, amount)
+    if error:
+        return jsonify({"error": error}), 400
+
+    return jsonify({
+        "message": f"Transferred {amount} from {sender} to {receiver} successfully"
+    }), 200
+
+# Batch Calculation
+@bp.route('/calculate-total', methods=['GET'])
+def calculate_total():
+    try:
+        total = calc_total_balance()
+        return jsonify({
+            "message": "Total balance calculated successfully",
+            "total_balance": total
+        }), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
