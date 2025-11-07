@@ -1,4 +1,5 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, jsonify, request
+
 from app.crud import (
     create_account,
     get_all_accounts,
@@ -7,7 +8,8 @@ from app.crud import (
     delete_account,
     deposit_money,
     withdraw_money,
-    transfer_money
+    transfer_money,
+    batch_calc
 )
 from app.batch_calc import calc_total_balance
 
@@ -21,16 +23,19 @@ def add_account():
     name = data.get('name')
     number = data.get('number')
     balance = data.get('balance')
+    email = data.get('email')
 
-    if not all([name, number, balance is not None]):
-        return jsonify({"error": "Missing fields"}), 400
+    if not all([name, number, email]):
+        return jsonify({"error": "Missing required fields"}), 400
 
-    account = create_account(name, number, balance)
+
+    account = create_account(name, number, balance, email)
     return jsonify({
         "id": account.id,
         "name": account.name,
         "number": account.number,
-        "balance": account.balance
+        "balance": account.balance,
+        "email": account.email
     }), 201
 
 
@@ -140,15 +145,9 @@ def transfer():
     return jsonify({
         "message": f"Transferred {amount} from {sender} to {receiver} successfully"
     }), 200
-
-# Batch Calculation
-@bp.route('/calculate-total', methods=['GET'])
-def calculate_total():
-    try:
-        total = calc_total_balance()
-        return jsonify({
-            "message": "Total balance calculated successfully",
-            "total_balance": total
-        }), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+    
+# 🏦 BATCH CALCULATION ENDPOINT
+@bp.route("/batch_calc", methods=["GET"])
+def calculate_total_balance():
+    result = batch_calc()
+    return jsonify(result), 200
