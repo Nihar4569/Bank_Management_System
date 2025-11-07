@@ -9,6 +9,7 @@ def test_create_accounts():
         {"name": "Rishabh", "number": "10002", "email": "iamrishabh1000@gmail.com", "balance": 2500},
         {"name": "Sahu", "number": "10003", "email": "sahun4569@gmail.com", "balance": 3000},
         {"name": "Rishabh Singh", "number": "10004", "email": "rishabhsingh29yes@gmail.com", "balance": 4000},
+        {"name": "Maheshwar", "number": "9750592159", "email": "gmaheswaranmca@gmail.com", "balance": 3000}
     ]
 
     for user in users:

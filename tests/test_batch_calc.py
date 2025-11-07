@@ -10,6 +10,7 @@ def test_batch_calc():
         {"name": "Nihar", "number": "1111", "email": "nihar4569@gmail.com", "balance": 1000},
         {"name": "Rishabh", "number": "2222", "email": "iamrishabh1000@gmail.com", "balance": 2000},
         {"name": "Sahu", "number": "3333", "email": "sahun4569@gmail.com", "balance": 3000},
+        # {"name": "Maheshwar", "number": "9750592159", "email": "gmaheswaranmca@gmail.com", "balance": 3000}
     ]
     for acc in sample_accounts:
         requests.post(f"{BASE_URL}/accounts", json=acc)
