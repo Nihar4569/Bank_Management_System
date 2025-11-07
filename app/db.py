@@ -10,3 +10,6 @@ def init_db(app):
     db.init_app(app)       # link this db object with Flask app
     with app.app_context():  # gives permission to access Flask resources
         db.create_all()    # create tables (like Account) in the database
+
+def get_db_session():
+    return db.session
