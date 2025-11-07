@@ -1,0 +1,264 @@
+2025-11-07 15:21:17,125 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 15:21:17,125 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 15:21:17,126 [INFO]  * Restarting with stat
+2025-11-07 15:21:17,922 [WARNING]  * Debugger is active!
+2025-11-07 15:21:17,924 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:22:07,150 [INFO]  * Detected change in 'C:\\Users\\nihasahu\\OneDrive - Cisco\\Desktop\\BMS\\Bank_Management_System\\tests\\test_scraper.py', reloading
+2025-11-07 15:22:07,319 [INFO]  * Restarting with stat
+2025-11-07 15:22:08,623 [WARNING]  * Debugger is active!
+2025-11-07 15:22:08,625 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:23:04,919 [INFO]  * Detected change in 'C:\\Users\\nihasahu\\OneDrive - Cisco\\Desktop\\BMS\\Bank_Management_System\\tests\\test_crud.py', reloading
+2025-11-07 15:23:05,062 [INFO]  * Restarting with stat
+2025-11-07 15:23:05,828 [WARNING]  * Debugger is active!
+2025-11-07 15:23:05,831 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:24:57,541 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:24:57,542 [INFO] 127.0.0.1 - - [07/Nov/2025 15:24:57] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:25:36,703 [INFO]  * Detected change in 'C:\\Users\\nihasahu\\OneDrive - Cisco\\Desktop\\BMS\\Bank_Management_System\\tests\\test_scraper.py', reloading
+2025-11-07 15:25:36,853 [INFO]  * Restarting with stat
+2025-11-07 15:25:37,736 [WARNING]  * Debugger is active!
+2025-11-07 15:25:37,738 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:25:42,612 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 15:25:42,613 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 15:25:42,614 [INFO]  * Restarting with stat
+2025-11-07 15:25:43,387 [WARNING]  * Debugger is active!
+2025-11-07 15:25:43,389 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:25:49,155 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:25:49,155 [INFO] Fetching rates for SBI...
+2025-11-07 15:25:49,156 [INFO] Fetching rates for HDFC...
+2025-11-07 15:25:49,157 [INFO] Fetching rates for ICICI...
+2025-11-07 15:25:50,159 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:25:50,218 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:25:50,705 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.sbi.co.in'. (_ssl.c:1077)")))
+2025-11-07 15:25:50,706 [INFO] Scraping completed for all banks.
+2025-11-07 15:25:50,707 [INFO] 127.0.0.1 - - [07/Nov/2025 15:25:50] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:25:51,651 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:25:51,653 [INFO] 127.0.0.1 - - [07/Nov/2025 15:25:51] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:25:54,712 [INFO] Batch calculation completed and summary email sent.
+2025-11-07 15:25:54,713 [INFO] 127.0.0.1 - - [07/Nov/2025 15:25:54] "GET /batch_calc HTTP/1.1" 200 -
+2025-11-07 15:25:57,995 [INFO] \u2705 New Account Created
+-------------------------
+Name: Nihar
+Account Number: 10001
+Opening Balance: 2000
+2025-11-07 15:25:58,001 [INFO] 127.0.0.1 - - [07/Nov/2025 15:25:58] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:26:00,993 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh
+Account Number: 10002
+Opening Balance: 2500
+2025-11-07 15:26:00,996 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:00] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:26:03,945 [INFO] \u2705 New Account Created
+-------------------------
+Name: Sahu
+Account Number: 10003
+Opening Balance: 3000
+2025-11-07 15:26:03,947 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:03] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:26:06,859 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh Singh
+Account Number: 10004
+Opening Balance: 4000
+2025-11-07 15:26:06,861 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:06] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:26:06,869 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:06] "GET /accounts HTTP/1.1" 200 -
+2025-11-07 15:26:06,880 [ERROR] AccountNotFoundError: Account not found: 99999
+2025-11-07 15:26:06,881 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:06] "[33mGET /accounts/99999 HTTP/1.1[0m" 404 -
+2025-11-07 15:26:06,893 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:06] "[31m[1mPOST /accounts/deposit HTTP/1.1[0m" 400 -
+2025-11-07 15:26:06,902 [ERROR] InvalidTransferError: Invalid sender or receiver account number
+2025-11-07 15:26:06,903 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:06] "[31m[1mPOST /accounts/transfer HTTP/1.1[0m" 400 -
+2025-11-07 15:26:06,916 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:26:06,917 [INFO] Fetching rates for SBI...
+2025-11-07 15:26:06,919 [INFO] Fetching rates for HDFC...
+2025-11-07 15:26:06,922 [INFO] Fetching rates for ICICI...
+2025-11-07 15:26:07,862 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:26:07,956 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:26:14,538 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.sbi.co.in'. (_ssl.c:1077)")))
+2025-11-07 15:26:14,539 [INFO] Scraping completed for all banks.
+2025-11-07 15:26:14,540 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:14] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:26:15,554 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:26:15,556 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:15] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:26:18,761 [INFO] \U0001f4b0 Deposit Successful
+-------------------------
+Account Number: 10001
+Amount Deposited: 1000
+New Balance: 3000.0
+2025-11-07 15:26:18,762 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:18] "POST /accounts/deposit HTTP/1.1" 200 -
+2025-11-07 15:26:21,845 [INFO] \U0001f4b8 Withdrawal Successful
+-------------------------
+Account Number: 10001
+Amount Withdrawn: 500
+Remaining Balance: 2500.0
+2025-11-07 15:26:21,846 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:21] "POST /accounts/withdraw HTTP/1.1" 200 -
+2025-11-07 15:26:28,065 [INFO] Transfer successful: 250 from 10002 to 10003
+2025-11-07 15:26:28,066 [INFO] 127.0.0.1 - - [07/Nov/2025 15:26:28] "POST /accounts/transfer HTTP/1.1" 200 -
+2025-11-07 15:26:51,137 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 15:26:51,137 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 15:26:51,139 [INFO]  * Restarting with stat
+2025-11-07 15:26:51,920 [WARNING]  * Debugger is active!
+2025-11-07 15:26:51,922 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:26:53,507 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:26:53,508 [INFO] Fetching rates for SBI...
+2025-11-07 15:26:53,509 [INFO] Fetching rates for HDFC...
+2025-11-07 15:26:53,509 [INFO] Fetching rates for ICICI...
+2025-11-07 15:26:54,399 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:26:54,551 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:27:13,557 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B367A7D940>, 'Connection to www.sbi.co.in timed out. (connect timeout=10)'))
+2025-11-07 15:27:13,559 [INFO] Scraping completed for all banks.
+2025-11-07 15:27:13,561 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:13] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:27:14,567 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:27:14,569 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:14] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:27:18,212 [INFO] Batch calculation completed and summary email sent.
+2025-11-07 15:27:18,213 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:18] "GET /batch_calc HTTP/1.1" 200 -
+2025-11-07 15:27:21,446 [INFO] \u2705 New Account Created
+-------------------------
+Name: Nihar
+Account Number: 10001
+Opening Balance: 2000
+2025-11-07 15:27:21,452 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:21] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:27:24,410 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh
+Account Number: 10002
+Opening Balance: 2500
+2025-11-07 15:27:24,413 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:24] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:27:27,845 [INFO] \u2705 New Account Created
+-------------------------
+Name: Sahu
+Account Number: 10003
+Opening Balance: 3000
+2025-11-07 15:27:27,848 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:27] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:27:31,032 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh Singh
+Account Number: 10004
+Opening Balance: 4000
+2025-11-07 15:27:31,034 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:31] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:27:31,049 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:31] "GET /accounts HTTP/1.1" 200 -
+2025-11-07 15:27:31,066 [ERROR] AccountNotFoundError: Account not found: 99999
+2025-11-07 15:27:31,066 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:31] "[33mGET /accounts/99999 HTTP/1.1[0m" 404 -
+2025-11-07 15:27:31,081 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:31] "[31m[1mPOST /accounts/deposit HTTP/1.1[0m" 400 -
+2025-11-07 15:27:31,101 [ERROR] InvalidTransferError: Invalid sender or receiver account number
+2025-11-07 15:27:31,101 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:31] "[31m[1mPOST /accounts/transfer HTTP/1.1[0m" 400 -
+2025-11-07 15:27:31,112 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:27:31,113 [INFO] Fetching rates for SBI...
+2025-11-07 15:27:31,114 [INFO] Fetching rates for HDFC...
+2025-11-07 15:27:31,115 [INFO] Fetching rates for ICICI...
+2025-11-07 15:27:31,909 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:27:32,042 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:27:51,142 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001B367A91D10>, 'Connection to www.sbi.co.in timed out. (connect timeout=10)'))
+2025-11-07 15:27:51,144 [INFO] Scraping completed for all banks.
+2025-11-07 15:27:51,145 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:51] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:27:52,032 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:27:52,033 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:52] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:27:54,939 [INFO] \U0001f4b0 Deposit Successful
+-------------------------
+Account Number: 10001
+Amount Deposited: 1000
+New Balance: 3000.0
+2025-11-07 15:27:54,941 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:54] "POST /accounts/deposit HTTP/1.1" 200 -
+2025-11-07 15:27:57,925 [INFO] \U0001f4b8 Withdrawal Successful
+-------------------------
+Account Number: 10001
+Amount Withdrawn: 500
+Remaining Balance: 2500.0
+2025-11-07 15:27:57,927 [INFO] 127.0.0.1 - - [07/Nov/2025 15:27:57] "POST /accounts/withdraw HTTP/1.1" 200 -
+2025-11-07 15:28:03,871 [INFO] Transfer successful: 250 from 10002 to 10003
+2025-11-07 15:28:03,871 [INFO] 127.0.0.1 - - [07/Nov/2025 15:28:03] "POST /accounts/transfer HTTP/1.1" 200 -
+2025-11-07 15:30:08,455 [INFO]  * Detected change in 'C:\\Users\\nihasahu\\OneDrive - Cisco\\Desktop\\BMS\\Bank_Management_System\\tests\\test_batch_calc.py', reloading
+2025-11-07 15:30:08,618 [INFO]  * Restarting with stat
+2025-11-07 15:30:09,684 [WARNING]  * Debugger is active!
+2025-11-07 15:30:09,690 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:30:36,430 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-11-07 15:30:36,430 [INFO] [33mPress CTRL+C to quit[0m
+2025-11-07 15:30:36,434 [INFO]  * Restarting with stat
+2025-11-07 15:30:37,456 [WARNING]  * Debugger is active!
+2025-11-07 15:30:37,458 [INFO]  * Debugger PIN: 126-793-802
+2025-11-07 15:30:43,940 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:30:43,941 [INFO] Fetching rates for SBI...
+2025-11-07 15:30:43,942 [INFO] Fetching rates for HDFC...
+2025-11-07 15:30:43,943 [INFO] Fetching rates for ICICI...
+2025-11-07 15:30:44,944 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:30:45,030 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:31:03,997 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002CD88ECD940>, 'Connection to www.sbi.co.in timed out. (connect timeout=10)'))
+2025-11-07 15:31:03,999 [INFO] Scraping completed for all banks.
+2025-11-07 15:31:04,001 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:04] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:31:04,920 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:31:04,922 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:04] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:31:08,422 [INFO] \u2705 New Account Created
+-------------------------
+Name: Nihar
+Account Number: 1111
+Opening Balance: 1000
+2025-11-07 15:31:08,431 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:08] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:12,150 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh
+Account Number: 2222
+Opening Balance: 2000
+2025-11-07 15:31:12,153 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:12] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:15,172 [INFO] \u2705 New Account Created
+-------------------------
+Name: Sahu
+Account Number: 3333
+Opening Balance: 3000
+2025-11-07 15:31:15,175 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:15] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:18,207 [INFO] Batch calculation completed and summary email sent.
+2025-11-07 15:31:18,208 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:18] "GET /batch_calc HTTP/1.1" 200 -
+2025-11-07 15:31:21,363 [INFO] \u2705 New Account Created
+-------------------------
+Name: Nihar
+Account Number: 10001
+Opening Balance: 2000
+2025-11-07 15:31:21,366 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:21] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:24,643 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh
+Account Number: 10002
+Opening Balance: 2500
+2025-11-07 15:31:24,646 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:24] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:28,065 [INFO] \u2705 New Account Created
+-------------------------
+Name: Sahu
+Account Number: 10003
+Opening Balance: 3000
+2025-11-07 15:31:28,067 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:28] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:31,161 [INFO] \u2705 New Account Created
+-------------------------
+Name: Rishabh Singh
+Account Number: 10004
+Opening Balance: 4000
+2025-11-07 15:31:31,163 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:31] "[35m[1mPOST /accounts HTTP/1.1[0m" 201 -
+2025-11-07 15:31:31,178 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:31] "GET /accounts HTTP/1.1" 200 -
+2025-11-07 15:31:31,208 [ERROR] AccountNotFoundError: Account not found: 99999
+2025-11-07 15:31:31,209 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:31] "[33mGET /accounts/99999 HTTP/1.1[0m" 404 -
+2025-11-07 15:31:31,226 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:31] "[31m[1mPOST /accounts/deposit HTTP/1.1[0m" 400 -
+2025-11-07 15:31:31,245 [ERROR] InvalidTransferError: Invalid sender or receiver account number
+2025-11-07 15:31:31,245 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:31] "[31m[1mPOST /accounts/transfer HTTP/1.1[0m" 400 -
+2025-11-07 15:31:31,253 [INFO] Starting concurrent scraping for interest rates...
+2025-11-07 15:31:31,254 [INFO] Fetching rates for SBI...
+2025-11-07 15:31:31,256 [INFO] Fetching rates for HDFC...
+2025-11-07 15:31:31,256 [INFO] Fetching rates for ICICI...
+2025-11-07 15:31:32,086 [WARNING] Failed to fetch ICICI: 403 Client Error: Forbidden for url: https://www.icicibank.com/Personal-Banking/deposits/fixed-deposit-interest-rates.page
+2025-11-07 15:31:32,188 [INFO] Successfully scraped data for HDFC
+2025-11-07 15:31:42,881 [WARNING] Failed to fetch SBI: HTTPSConnectionPool(host='www.sbi.co.in', port=443): Max retries exceeded with url: /web/interest-rates/deposit-rates (Caused by SSLError(SSLCertVerificationError(1, "[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.sbi.co.in'. (_ssl.c:1077)")))
+2025-11-07 15:31:42,882 [INFO] Scraping completed for all banks.
+2025-11-07 15:31:42,883 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:42] "GET /scrape/interest-rates HTTP/1.1" 200 -
+2025-11-07 15:31:43,934 [INFO] \u2705 Scraped 14 bank names from RBI site.
+2025-11-07 15:31:43,935 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:43] "GET /scrape/bank-names HTTP/1.1" 200 -
+2025-11-07 15:31:47,836 [INFO] \U0001f4b0 Deposit Successful
+-------------------------
+Account Number: 10001
+Amount Deposited: 1000
+New Balance: 3000.0
+2025-11-07 15:31:47,837 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:47] "POST /accounts/deposit HTTP/1.1" 200 -
+2025-11-07 15:31:50,847 [INFO] \U0001f4b8 Withdrawal Successful
+-------------------------
+Account Number: 10001
+Amount Withdrawn: 500
+Remaining Balance: 2500.0
+2025-11-07 15:31:50,848 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:50] "POST /accounts/withdraw HTTP/1.1" 200 -
+2025-11-07 15:31:57,783 [INFO] Transfer successful: 250 from 10002 to 10003
+2025-11-07 15:31:57,785 [INFO] 127.0.0.1 - - [07/Nov/2025 15:31:57] "POST /accounts/transfer HTTP/1.1" 200 -
